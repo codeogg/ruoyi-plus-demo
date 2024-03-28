@@ -1,0 +1,15 @@
+ruoyi:
+  name: RuoYi-Plus-Demo
+  version: 1.0
+  cacheLazy: false
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+logging:
+  level:
+    com.ruoyi: info
+    org.springframework: warn
+#  config: classpath:logback-plus.xml
