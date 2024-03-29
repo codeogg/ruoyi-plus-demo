@@ -2,6 +2,7 @@ package com.xufei.web.controller.system;
 
 import com.xufei.common.core.domain.CommonResult;
 import com.xufei.common.core.domain.model.LoginBody;
+import com.xufei.system.service.SysLoginService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;

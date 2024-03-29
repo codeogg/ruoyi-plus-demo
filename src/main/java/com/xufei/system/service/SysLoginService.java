@@ -10,4 +10,13 @@ import org.springframework.stereotype.Service;
 public class SysLoginService {
 
 
+    public String login(String username, String password) {
+
+
+    }
+
+    private SysUser loadUserByUsername(String username)
+    {
+
+    }
 }
