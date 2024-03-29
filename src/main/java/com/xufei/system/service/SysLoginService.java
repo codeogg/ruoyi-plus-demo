@@ -6,7 +6,9 @@ import cn.hutool.core.util.ObjectUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.xufei.common.core.domain.entity.SysUser;
 import com.xufei.common.core.domain.model.LoginUser;
+import com.xufei.common.enums.DeviceType;
 import com.xufei.common.exception.UserException;
+import com.xufei.common.helper.LoginHelper;
 import com.xufei.system.mapper.SysUserMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -35,10 +37,10 @@ public class SysLoginService {
         loginUser.setDeptId(user.getDeptId());
         loginUser.setUsername(user.getUsername());
         loginUser.setNickname(user.getNickname());
-        loginUser.setDeptName(ObjectUtil.isNull(user.getDept()) ? "": user.getDept().getDeptName());
-        loginUser.setMenuPermission();
-        loginUser.setRolePermission();
-
+        loginUser.setDeptName(ObjectUtil.isNull(user.getDept()) ? "" : user.getDept().getDeptName());
+        loginUser.setMenuPermission(null);
+        loginUser.setRolePermission(null);
+        return loginUser;
     }
 
     private SysUser loadUserByUsername(String username) {

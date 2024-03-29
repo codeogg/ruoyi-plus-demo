@@ -8,5 +8,11 @@ import lombok.Data;
 @TableName("sys_dept")
 public class SysDept extends BaseEntity {
 
-
+    private Long id;
+    private Long parentId;
+    private String ancestors;
+    private String deptName;
+    private Integer sort;
+    private Integer status;
+    private Long siteId;
 }

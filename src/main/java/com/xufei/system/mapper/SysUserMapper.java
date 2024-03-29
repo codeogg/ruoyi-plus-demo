@@ -6,4 +6,5 @@ import com.xufei.common.core.domain.entity.SysUser;
 public interface SysUserMapper extends BaseMapper<SysUser> {
 
 
+    SysUser selectUserByUsername(String username);
 }
